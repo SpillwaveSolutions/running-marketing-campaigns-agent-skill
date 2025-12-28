@@ -2,18 +2,17 @@
 name: running-marketing-campaigns
 description: >
   Plans, creates, and optimizes digital marketing campaigns including content
-  strategy, social media, email marketing, and analytics. Generates UTM
+  strategy, social media, email marketing, SEO, and AI visibility (GEO). Generates UTM
   parameters and tracking URLs. Helps develop go-to-market strategies,
-  campaign messaging, content calendars, and performance measurement
-  frameworks. Use when creating marketing campaigns, planning content
-  strategy, building email sequences, setting up campaign tracking,
-  analyzing marketing metrics, or launching products. Supports both
-  marketing beginners learning fundamentals and experienced marketers
-  needing execution templates and benchmarks.
+  campaign messaging, content calendars, and performance measurement frameworks.
+  Use when asked to "create a marketing campaign", "plan content strategy",
+  "build email sequences", "set up UTM tracking", "analyze marketing metrics",
+  "launch a product", "optimize for SEO", or "improve AI visibility".
+  Supports both marketing beginners and experienced marketers needing templates.
 license: MIT
 metadata:
-  version: 1.1.0
-  domains: [content, social, email, analytics, gtm, brand]
+  version: 1.2.0
+  domains: [content, social, email, analytics, gtm, brand, seo, geo]
   author: Claude Skills
 ---
 
@@ -60,6 +59,8 @@ Primary metrics by channel:
 | Measure performance | [analytics-measurement.md](references/analytics-measurement.md) | KPIs, GA4 setup, attribution, ROI calculations |
 | Launch products | [gtm-tools.md](references/gtm-tools.md) | GTM frameworks, positioning, tool selection |
 | Define brand voice | [brand-guidelines.md](references/brand-guidelines.md) | Voice dimensions, tone, messaging framework, terminology |
+| Optimize for search | [seo-optimization.md](references/seo-optimization.md) | Technical SEO, on-page, content SEO, link building, E-E-A-T |
+| Optimize for AI | [geo-optimization.md](references/geo-optimization.md) | GEO, LLMO, AEO, AI Overviews, chatbot visibility |
 
 ## Scripts
 
@@ -166,6 +167,24 @@ Brand voice, tone, or messaging?
 │        • Messaging framework
 │        • Terminology standards
 │        • Compliance checking
+└─ No ↓
+
+SEO or search engine optimization?
+├─ Yes → seo-optimization.md
+│        • Technical SEO (crawling, indexing, speed)
+│        • On-page SEO (titles, headers, content)
+│        • Content SEO (E-E-A-T, topic clusters)
+│        • Link building strategies
+│        • Core Web Vitals
+└─ No ↓
+
+AI visibility, GEO, or chatbot optimization?
+├─ Yes → geo-optimization.md
+│        • Generative Engine Optimization (GEO)
+│        • LLMO (Large Language Model Optimization)
+│        • AEO (Answer Engine Optimization)
+│        • ChatGPT, Perplexity, AI Overviews visibility
+│        • Content structure for AI citation
 └─ No → Clarify the specific marketing need
 ```
 
@@ -197,6 +216,24 @@ Some requests span multiple domains. Load references in this order:
 **"Define our brand voice"**
 1. brand-guidelines.md — Voice dimensions, this-but-not-that chart
 2. Use brand_checker.py to validate existing copy
+
+**"Improve search rankings"**
+1. seo-optimization.md — Technical audit, on-page optimization
+2. content-strategy.md — Topic clusters, content gaps
+3. analytics-measurement.md — Track ranking improvements
+
+**"Get content cited by AI (ChatGPT, Perplexity)"**
+1. geo-optimization.md — GEO strategies, content structure for AI
+2. seo-optimization.md — Foundation for discoverability
+3. content-strategy.md — Authority-building content
+
+**"Full digital marketing strategy"**
+1. seo-optimization.md — Search foundation
+2. geo-optimization.md — AI visibility
+3. content-strategy.md — Content planning
+4. social-media.md — Distribution channels
+5. email-marketing.md — Nurture sequences
+6. analytics-measurement.md — Measurement framework
 
 ## Campaign Validation Checklist
 
@@ -247,12 +284,13 @@ Before launching any campaign, verify:
 - Marketing tool recommendations
 - Brand voice and messaging frameworks
 - Copy compliance checking
+- SEO optimization (technical, on-page, content, E-E-A-T)
+- GEO/AI visibility optimization (ChatGPT, Perplexity, AI Overviews)
 
 **Out of scope (suggest alternatives):**
 - Paid ad campaign management (bid strategies, audience targeting)
 - CRM workflow implementation
 - Website design/development
-- Technical SEO (crawling, indexing, schema markup)
 - Brand identity design (logos, colors, visual design)
 - PR and media relations
 - General copywriting (not campaign-specific)

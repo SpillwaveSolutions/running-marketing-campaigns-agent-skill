@@ -11,8 +11,112 @@ A comprehensive Claude Code skill for planning, executing, and measuring digital
 - **Analytics & Measurement** - KPI frameworks, attribution models, ROI calculations
 - **Go-to-Market** - Launch frameworks (SOSTAC, RACE, AARRR), positioning methodology
 - **Brand Voice** - Voice dimension matrix, tone guidelines, messaging frameworks, terminology standards
+- **SEO Optimization** - Technical SEO, on-page optimization, content SEO, link building, E-E-A-T guidelines
+- **GEO (Generative Engine Optimization)** - AI SEO, LLMO, AEO for ChatGPT, Perplexity, Google AI Overviews visibility
 
-## Installation
+## Installing with Skilz (Universal Installer)
+
+The recommended way to install this skill across different AI coding agents is using the **skilz** universal installer.
+
+### Install Skilz
+
+```bash
+pip install skilz
+```
+
+This skill supports [Agent Skill Standard](https://agentskills.io/) which means it supports 14 plus coding agents including Claude Code, OpenAI Codex, Cursor and Gemini.
+
+### Git URL Options
+
+You can use either `-g` or `--git` with HTTPS or SSH URLs:
+
+```bash
+# HTTPS URL
+skilz install -g https://github.com/SpillwaveSolutions/running-marketing-campaigns-agent-skill
+
+# SSH URL
+skilz install --git git@github.com:SpillwaveSolutions/running-marketing-campaigns-agent-skill.git
+```
+
+### Claude Code
+
+Install to user home (available in all projects):
+```bash
+skilz install -g https://github.com/SpillwaveSolutions/running-marketing-campaigns-agent-skill
+```
+
+Install to current project only:
+```bash
+skilz install -g https://github.com/SpillwaveSolutions/running-marketing-campaigns-agent-skill --project
+```
+
+### OpenCode
+
+Install for [OpenCode](https://opencode.ai):
+```bash
+skilz install -g https://github.com/SpillwaveSolutions/running-marketing-campaigns-agent-skill --agent opencode
+```
+
+Project-level install:
+```bash
+skilz install -g https://github.com/SpillwaveSolutions/running-marketing-campaigns-agent-skill --project --agent opencode
+```
+
+### Gemini
+
+Project-level install for Gemini:
+```bash
+skilz install -g https://github.com/SpillwaveSolutions/running-marketing-campaigns-agent-skill --agent gemini
+```
+
+### OpenAI Codex
+
+Install for OpenAI Codex:
+```bash
+skilz install -g https://github.com/SpillwaveSolutions/running-marketing-campaigns-agent-skill --agent codex
+```
+
+Project-level install:
+```bash
+skilz install -g https://github.com/SpillwaveSolutions/running-marketing-campaigns-agent-skill --project --agent codex
+```
+
+### Install from Skillzwave Marketplace
+
+```bash
+# Claude to user home dir ~/.claude/skills
+skilz install SpillwaveSolutions_running-marketing-campaigns-agent-skill/running-marketing-campaigns
+
+# Claude skill in project folder ./claude/skills
+skilz install SpillwaveSolutions_running-marketing-campaigns-agent-skill/running-marketing-campaigns --project
+
+# OpenCode install to user home dir ~/.config/opencode/skills
+skilz install SpillwaveSolutions_running-marketing-campaigns-agent-skill/running-marketing-campaigns --agent opencode
+
+# OpenCode project level
+skilz install SpillwaveSolutions_running-marketing-campaigns-agent-skill/running-marketing-campaigns --agent opencode --project
+
+# OpenAI Codex install to user home dir ~/.codex/skills
+skilz install SpillwaveSolutions_running-marketing-campaigns-agent-skill/running-marketing-campaigns --agent codex
+
+# OpenAI Codex project level ./.codex/skills
+skilz install SpillwaveSolutions_running-marketing-campaigns-agent-skill/running-marketing-campaigns --agent codex --project
+
+# Gemini CLI (project level) -- only works with project level
+skilz install SpillwaveSolutions_running-marketing-campaigns-agent-skill/running-marketing-campaigns --agent gemini
+```
+
+See [Skill Listing](https://skillzwave.ai/skill/SpillwaveSolutions__running-marketing-campaigns-agent-skill__running-marketing-campaigns__SKILL/) to see how to install this exact skill to 14+ different coding agents.
+
+### Other Supported Agents
+
+Skilz supports 14+ coding agents including Windsurf, Qwen Code, Aidr, and more.
+
+For the full list of supported platforms, visit [SkillzWave.ai/platforms](https://skillzwave.ai/platforms/) or see the [skilz-cli GitHub repository](https://github.com/SpillwaveSolutions/skilz-cli).
+
+---
+
+## Manual Installation
 
 ### Claude Code
 
@@ -22,7 +126,7 @@ git clone https://github.com/SpillwaveSolutions/running-marketing-campaigns-agen
   ~/.claude/skills/running-marketing-campaigns
 ```
 
-### Manual Installation
+### Other Methods
 
 1. Download or clone this repository
 2. Copy the contents to `~/.claude/skills/running-marketing-campaigns/`
@@ -112,12 +216,15 @@ python scripts/brand_checker.py list-banned
 running-marketing-campaigns/
 ├── SKILL.md                          # Main skill definition
 ├── README.md                         # This file
+├── LICENSE                           # MIT License
 ├── references/
 │   ├── analytics-measurement.md      # KPIs, GA4, attribution, ROI
 │   ├── brand-guidelines.md           # Voice, tone, messaging, terminology
 │   ├── content-strategy.md           # Topic clusters, calendars, funnel mapping
 │   ├── email-marketing.md            # Sequences, subject lines, deliverability
+│   ├── geo-optimization.md           # GEO, LLMO, AEO, AI visibility
 │   ├── gtm-tools.md                  # Launch frameworks, positioning
+│   ├── seo-optimization.md           # Technical, on-page, content SEO
 │   ├── social-media.md               # Platform tactics, benchmarks
 │   └── utm-tracking.md               # UTM formatting, GA4 alignment
 └── scripts/
@@ -136,6 +243,8 @@ running-marketing-campaigns/
 | [analytics-measurement.md](references/analytics-measurement.md) | Marketing funnel KPIs, attribution models, reporting templates |
 | [gtm-tools.md](references/gtm-tools.md) | SOSTAC, RACE, AARRR frameworks, launch planning |
 | [brand-guidelines.md](references/brand-guidelines.md) | Voice dimensions, tone adaptation, messaging framework |
+| [seo-optimization.md](references/seo-optimization.md) | Technical SEO, on-page, content SEO, link building, E-E-A-T |
+| [geo-optimization.md](references/geo-optimization.md) | Generative Engine Optimization, LLMO, AEO, AI visibility |
 
 ## Brand Voice Features
 
@@ -191,3 +300,11 @@ Contributions welcome! Please:
 - [Claude Code Documentation](https://docs.anthropic.com/claude-code)
 - [Claude Skills Specification](https://github.com/anthropics/claude-code/blob/main/docs/skills-spec.md)
 - [GA4 Default Channel Groupings](https://support.google.com/analytics/answer/9756891)
+
+---
+
+<p align="center">
+  <a href="https://skillzwave.ai/">SkillzWave.ai - Largest Agentic Marketplace for AI Agent Skills</a>
+  <br>
+  <a href="https://spillwave.com/">SpillWave - Leaders in AI Agent Development</a>
+</p>
