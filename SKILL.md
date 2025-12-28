@@ -4,13 +4,11 @@ description: >
   Plans, creates, and optimizes digital marketing campaigns including content
   strategy, social media, email marketing, SEO, and AI visibility (GEO). Generates UTM
   parameters and tracking URLs. Helps develop go-to-market strategies,
-  campaign messaging, content calendars, performance measurement frameworks,
-  search engine optimization, and generative engine optimization for AI chatbots.
-  Use when creating marketing campaigns, planning content strategy, building email
-  sequences, setting up campaign tracking, analyzing marketing metrics, launching
-  products, optimizing for search engines, or improving visibility in AI-generated
-  responses. Supports both marketing beginners learning fundamentals and experienced
-  marketers needing execution templates and benchmarks.
+  campaign messaging, content calendars, and performance measurement frameworks.
+  Use when asked to "create a marketing campaign", "plan content strategy",
+  "build email sequences", "set up UTM tracking", "analyze marketing metrics",
+  "launch a product", "optimize for SEO", or "improve AI visibility".
+  Supports both marketing beginners and experienced marketers needing templates.
 license: MIT
 metadata:
   version: 1.2.0
@@ -286,12 +284,13 @@ Before launching any campaign, verify:
 - Marketing tool recommendations
 - Brand voice and messaging frameworks
 - Copy compliance checking
+- SEO optimization (technical, on-page, content, E-E-A-T)
+- GEO/AI visibility optimization (ChatGPT, Perplexity, AI Overviews)
 
 **Out of scope (suggest alternatives):**
 - Paid ad campaign management (bid strategies, audience targeting)
 - CRM workflow implementation
 - Website design/development
-- Technical SEO (crawling, indexing, schema markup)
 - Brand identity design (logos, colors, visual design)
 - PR and media relations
 - General copywriting (not campaign-specific)
