@@ -1,6 +1,28 @@
 # Running Marketing Campaigns - Claude Agent Skill
 
-A comprehensive Claude Code skill for planning, executing, and measuring digital marketing campaigns across content, social media, email, and analytics channels.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Agent Skill Standard](https://img.shields.io/badge/Agent%20Skill-Standard-blue)](https://agentskills.io/)
+[![Skilz Compatible](https://img.shields.io/badge/Skilz-Compatible-green)](https://github.com/SpillwaveSolutions/skilz-cli)
+
+A comprehensive Claude Code skill for planning, executing, and measuring digital marketing campaigns across content, social media, email, SEO, GEO, and analytics channels. Supports 14+ AI coding agents through the [Agent Skill Standard](https://agentskills.io/).
+
+## Quick Start
+
+```bash
+# Install with skilz (recommended)
+pip install skilz
+skilz install -g https://github.com/SpillwaveSolutions/running-marketing-campaigns-agent-skill
+
+# Or install from marketplace
+skilz install SpillwaveSolutions_running-marketing-campaigns-agent-skill/running-marketing-campaigns
+```
+
+Then ask Claude:
+- "Help me plan a product launch campaign"
+- "Generate UTM parameters for my email newsletter"
+- "Create a content calendar for Q1"
+- "Define our brand voice guidelines"
+- "Optimize my content for AI visibility (GEO)"
 
 ## Features
 
@@ -16,15 +38,13 @@ A comprehensive Claude Code skill for planning, executing, and measuring digital
 
 ## Installing with Skilz (Universal Installer)
 
-The recommended way to install this skill across different AI coding agents is using the **skilz** universal installer.
+The recommended way to install this skill across different AI coding agents is using the **skilz** universal installer. This skill supports the [Agent Skill Standard](https://agentskills.io/), which means it works with 14+ coding agents including Claude Code, OpenAI Codex, Cursor, and Gemini CLI.
 
 ### Install Skilz
 
 ```bash
 pip install skilz
 ```
-
-This skill supports [Agent Skill Standard](https://agentskills.io/) which means it supports 14 plus coding agents including Claude Code, OpenAI Codex, Cursor and Gemini.
 
 ### Git URL Options
 
@@ -136,13 +156,15 @@ git clone https://github.com/SpillwaveSolutions/running-marketing-campaigns-agen
 
 The skill activates automatically when you ask Claude about:
 
-- Creating marketing campaigns
-- Planning content strategy
-- Building email sequences
-- Setting up campaign tracking
-- Analyzing marketing metrics
-- Launching products
-- Defining brand voice
+- Creating marketing campaigns and go-to-market strategies
+- Planning content strategy and topic clusters
+- Building email sequences and drip campaigns
+- Setting up UTM campaign tracking
+- Analyzing marketing metrics and KPIs
+- Launching products with SOSTAC/RACE/AARRR frameworks
+- Defining brand voice and messaging guidelines
+- Optimizing for SEO (technical, on-page, content)
+- Optimizing for AI visibility (GEO, LLMO, AEO)
 
 ### Example Prompts
 
@@ -153,6 +175,8 @@ The skill activates automatically when you ask Claude about:
 "What KPIs should I track for social media?"
 "Define our brand voice guidelines"
 "Check if my marketing copy follows brand guidelines"
+"Optimize my content for ChatGPT and Perplexity visibility"
+"Create an SEO strategy for my SaaS product"
 ```
 
 ## Scripts
@@ -277,7 +301,8 @@ Automatically flag:
 
 ## Requirements
 
-- Claude Code CLI
+- Any supported AI coding agent (Claude Code, OpenAI Codex, Gemini CLI, etc.)
+- [skilz](https://github.com/SpillwaveSolutions/skilz-cli) for universal installation (recommended)
 - Python 3.8+ (for scripts)
 - Optional: `qrcode`, `pillow` (for QR code generation)
 - Optional: `requests` (for URL shortening via bit.ly)
@@ -297,13 +322,17 @@ Contributions welcome! Please:
 
 ## Related Resources
 
+- [Agent Skill Standard](https://agentskills.io/) - Universal skill specification for AI coding agents
+- [skilz CLI](https://github.com/SpillwaveSolutions/skilz-cli) - Universal installer for agent skills
+- [SkillzWave Marketplace](https://skillzwave.ai/) - Browse and discover AI agent skills
 - [Claude Code Documentation](https://docs.anthropic.com/claude-code)
-- [Claude Skills Specification](https://github.com/anthropics/claude-code/blob/main/docs/skills-spec.md)
 - [GA4 Default Channel Groupings](https://support.google.com/analytics/answer/9756891)
 
 ---
 
 <p align="center">
+  <a href="https://skillzwave.ai/skill/SpillwaveSolutions__running-marketing-campaigns-agent-skill__running-marketing-campaigns__SKILL/">View on SkillzWave Marketplace</a>
+  <br><br>
   <a href="https://skillzwave.ai/">SkillzWave.ai - Largest Agentic Marketplace for AI Agent Skills</a>
   <br>
   <a href="https://spillwave.com/">SpillWave - Leaders in AI Agent Development</a>
