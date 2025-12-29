@@ -29,6 +29,9 @@ Medium: how it arrives (cpc, email, social, organic)
 Campaign: initiative name (spring-sale-2025, product-launch)
 
 Format: lowercase, hyphens, no spaces
+Input: "Spring Sale 2025" → Output: "spring-sale-2025"
+Input: "Q1 Launch Campaign" → Output: "q1-launch-campaign"
+
 Example: ?utm_source=linkedin&utm_medium=social&utm_campaign=q1-launch
 ```
 
@@ -188,52 +191,20 @@ AI visibility, GEO, or chatbot optimization?
 └─ No → Clarify the specific marketing need
 ```
 
-## Multi-Domain Queries
+## Multi-Domain Loading Order
 
-Some requests span multiple domains. Load references in this order:
+For requests spanning multiple domains, load references in priority order:
 
-**"Plan a product launch"**
-1. gtm-tools.md — Launch structure, positioning
-2. brand-guidelines.md — Messaging framework, voice alignment
-3. content-strategy.md — Content calendar for launch
-4. email-marketing.md — Announcement sequences
-5. social-media.md — Platform-specific launch tactics
-
-**"Set up campaign tracking and reporting"**
-1. utm-tracking.md — Parameter setup
-2. analytics-measurement.md — GA4 configuration, dashboards
-
-**"Create a quarterly marketing plan"**
-1. content-strategy.md — Content pillars and calendar
-2. social-media.md — Platform strategy
-3. email-marketing.md — Email calendar
-4. analytics-measurement.md — KPIs and reporting cadence
-
-**"Optimize campaign performance"**
-1. analytics-measurement.md — Identify metrics gaps
-2. Then domain-specific reference based on underperforming channel
-
-**"Define our brand voice"**
-1. brand-guidelines.md — Voice dimensions, this-but-not-that chart
-2. Use brand_checker.py to validate existing copy
-
-**"Improve search rankings"**
-1. seo-optimization.md — Technical audit, on-page optimization
-2. content-strategy.md — Topic clusters, content gaps
-3. analytics-measurement.md — Track ranking improvements
-
-**"Get content cited by AI (ChatGPT, Perplexity)"**
-1. geo-optimization.md — GEO strategies, content structure for AI
-2. seo-optimization.md — Foundation for discoverability
-3. content-strategy.md — Authority-building content
-
-**"Full digital marketing strategy"**
-1. seo-optimization.md — Search foundation
-2. geo-optimization.md — AI visibility
-3. content-strategy.md — Content planning
-4. social-media.md — Distribution channels
-5. email-marketing.md — Nurture sequences
-6. analytics-measurement.md — Measurement framework
+| Request Type | Primary | Secondary | Supporting |
+|--------------|---------|-----------|------------|
+| Product launch | gtm-tools.md | brand-guidelines.md, content-strategy.md | email-marketing.md, social-media.md |
+| Campaign tracking | utm-tracking.md | analytics-measurement.md | — |
+| Quarterly plan | content-strategy.md | social-media.md, email-marketing.md | analytics-measurement.md |
+| Performance optimization | analytics-measurement.md | (channel-specific) | — |
+| Brand voice | brand-guidelines.md | brand_checker.py | — |
+| Search rankings | seo-optimization.md | content-strategy.md | analytics-measurement.md |
+| AI visibility | geo-optimization.md | seo-optimization.md | content-strategy.md |
+| Full strategy | seo-optimization.md, geo-optimization.md | content-strategy.md, social-media.md | email-marketing.md, analytics-measurement.md |
 
 ## Campaign Validation Checklist
 
@@ -266,7 +237,7 @@ Before launching any campaign, verify:
 ## Persona Adaptation
 
 **Beginner signals:** Asks "what is," "how do I," "why should I," unfamiliar terminology, requests explanations.
-→ Provide concept context before tactics. Explain frameworks. Offer templates to follow.
+→ Provide concept context before tactics. Explain frameworks. Offer templates.
 
 **Experienced signals:** Uses correct terminology, asks for benchmarks, requests templates, mentions specific tools.
 → Skip fundamentals. Provide benchmarks, templates, advanced tactics directly.
