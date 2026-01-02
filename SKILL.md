@@ -7,18 +7,30 @@ description: >
   campaign messaging, content calendars, and performance measurement frameworks.
   Use when asked to "create a marketing campaign", "plan content strategy",
   "build email sequences", "set up UTM tracking", "analyze marketing metrics",
-  "launch a product", "optimize for SEO", or "improve AI visibility".
+  "launch a product", "optimize for SEO", "improve AI visibility", "optimize for voice search",
+  "set up IndexNow", "check accessibility for SEO", or "create social media previews".
   Supports both marketing beginners and experienced marketers needing templates.
 license: MIT
 metadata:
-  version: 1.2.0
-  domains: [content, social, email, analytics, gtm, brand, seo, geo]
+  version: 1.3.0
+  domains: [content, social, email, analytics, gtm, brand, seo, geo, voice-search, accessibility]
   author: Claude Skills
 ---
 
 # Marketing Campaign Execution
 
 Plan, execute, and measure digital marketing campaigns across content, social, email, and analytics.
+
+## Contents
+
+- [Quick Start](#quick-start)
+- [Domain Reference Guide](#domain-reference-guide)
+- [Scripts](#scripts)
+- [Workflow Decision Tree](#workflow-decision-tree)
+- [Multi-Domain Queries](#multi-domain-queries)
+- [Campaign Validation Checklist](#campaign-validation-checklist)
+- [Persona Adaptation](#persona-adaptation)
+- [Boundaries](#boundaries)
 
 ## Quick Start
 
