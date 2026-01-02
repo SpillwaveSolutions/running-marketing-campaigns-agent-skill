@@ -6,8 +6,10 @@ Comprehensive guide to search engine optimization covering technical SEO, on-pag
 
 - [Core Ranking Factors](#core-ranking-factors)
 - [Technical SEO](#technical-seo)
+- [Social Media Preview Optimization](#social-media-preview-optimization)
 - [On-Page SEO](#on-page-seo)
 - [Content SEO](#content-seo)
+- [Accessibility for SEO](#accessibility-for-seo)
 - [E-E-A-T Guidelines](#e-e-a-t-guidelines)
 - [Link Building](#link-building)
 - [SEO Audit Checklist](#seo-audit-checklist)
@@ -114,6 +116,53 @@ Sitemap: https://example.com/sitemap.xml
 # Google Rich Results Test: https://search.google.com/test/rich-results
 # Schema Markup Validator: https://validator.schema.org/
 ```
+
+### Social Media Preview Optimization
+
+Proper Open Graph and Twitter Card meta tags ensure content displays correctly when shared.
+
+#### Image Dimensions by Platform
+
+| Platform | Recommended Size | Aspect Ratio | Notes |
+|----------|------------------|--------------|-------|
+| Facebook | 1200 × 630 px | 1.91:1 | Standard og:image |
+| LinkedIn | 1200 × 627 px | 1.91:1 | Custom URL preview |
+| WhatsApp | 1200 × 630 px | 1.91:1 | Uses Open Graph |
+| Twitter/X | 1200 × 628 px | 1.91:1 | summary_large_image |
+| Instagram Feed | 1080 × 1350 px | 4:5 | Vertical preferred |
+| Instagram Stories | 1080 × 1920 px | 9:16 | Full screen mobile |
+
+#### Required Meta Tags
+
+```html
+<!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+<meta property="og:title" content="Your Page Title" />
+<meta property="og:description" content="Compelling description under 160 chars" />
+<meta property="og:image" content="https://example.com/image-1200x630.jpg" />
+<meta property="og:url" content="https://example.com/page" />
+<meta property="og:type" content="article" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Your Page Title" />
+<meta name="twitter:description" content="Compelling description" />
+<meta name="twitter:image" content="https://example.com/image-1200x628.jpg" />
+```
+
+#### Social Preview Checklist
+
+- [ ] og:image is 1200×630px minimum
+- [ ] Image uses absolute URL (https://...)
+- [ ] og:title is under 60 characters
+- [ ] og:description is under 160 characters
+- [ ] No text in safe zone margins (keep text centered)
+- [ ] Test with platform validators
+
+#### Validation Tools
+
+- [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/)
+- [Twitter Card Validator](https://cards-dev.twitter.com/validator)
+- [LinkedIn Post Inspector](https://www.linkedin.com/post-inspector/)
 
 ---
 
@@ -265,6 +314,113 @@ Create content that satisfies search intent and demonstrates expertise.
 
 ---
 
+## Accessibility for SEO
+
+Accessibility improvements directly impact SEO through better crawlability, semantic structure, and page experience signals.
+
+### Why Accessibility Matters for SEO
+
+| Factor | SEO Impact |
+|--------|------------|
+| Semantic HTML | Helps crawlers understand content hierarchy |
+| Alt text | Enables image search visibility |
+| Heading structure | Reinforces content relevance signals |
+| Keyboard navigation | Improves page experience metrics |
+| Fast load times | Core Web Vitals improvement |
+| Mobile accessibility | Required for mobile-first indexing |
+
+### WCAG 2.1 AA Checklist (SEO-Relevant)
+
+#### Perceivable
+
+- [ ] All images have descriptive alt text (or alt="" for decorative)
+- [ ] Videos have captions and transcripts
+- [ ] Color contrast ratio ≥4.5:1 for text
+- [ ] Text can be resized to 200% without loss of content
+- [ ] No content relies solely on color to convey meaning
+
+#### Operable
+
+- [ ] All functionality available via keyboard
+- [ ] No keyboard traps (users can navigate away)
+- [ ] Skip navigation links for screen readers
+- [ ] Focus indicators visible on interactive elements
+- [ ] No content flashes more than 3 times per second
+
+#### Understandable
+
+- [ ] Page language declared (`<html lang="en">`)
+- [ ] Form inputs have associated labels
+- [ ] Error messages identify the field and describe the error
+- [ ] Consistent navigation across pages
+
+#### Robust
+
+- [ ] Valid HTML (passes W3C validation)
+- [ ] ARIA attributes used correctly
+- [ ] Custom components have appropriate roles
+
+### Semantic HTML for SEO
+
+```html
+<!-- Good: Semantic structure -->
+<header>
+  <nav aria-label="Main navigation">...</nav>
+</header>
+<main>
+  <article>
+    <h1>Primary Topic</h1>
+    <section>
+      <h2>Subtopic</h2>
+      <p>Content...</p>
+    </section>
+  </article>
+  <aside aria-label="Related content">...</aside>
+</main>
+<footer>...</footer>
+
+<!-- Bad: Non-semantic structure -->
+<div class="header">
+  <div class="nav">...</div>
+</div>
+<div class="content">
+  <div class="title">Primary Topic</div>
+  <div class="section">...</div>
+</div>
+```
+
+### ARIA Labels for Navigation
+
+```html
+<!-- Help screen readers and crawlers understand navigation -->
+<nav aria-label="Main navigation">
+  <ul>
+    <li><a href="/products">Products</a></li>
+    <li><a href="/about">About</a></li>
+  </ul>
+</nav>
+
+<nav aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><a href="/products">Products</a></li>
+    <li aria-current="page">Widget</li>
+  </ol>
+</nav>
+```
+
+### Accessibility Testing Tools
+
+| Tool | Purpose |
+|------|---------|
+| [WAVE](https://wave.webaim.org/) | Visual accessibility checker |
+| [axe DevTools](https://www.deque.com/axe/) | Browser extension for WCAG testing |
+| [Lighthouse](https://developers.google.com/web/tools/lighthouse) | Accessibility score in Chrome DevTools |
+| [Pa11y](https://pa11y.org/) | CLI accessibility testing |
+| [NVDA](https://www.nvaccess.org/) | Free screen reader for testing |
+
+---
+
 ## E-E-A-T Guidelines
 
 Demonstrate Experience, Expertise, Authoritativeness, and Trustworthiness.
@@ -285,6 +441,31 @@ Demonstrate Experience, Expertise, Authoritativeness, and Trustworthiness.
 - Links to author's social profiles
 - Author schema markup
 - Multiple articles by same author
+
+**Author Bio Format (GEO-Optimized):**
+```markdown
+**Author**: Dr. Sarah Johnson, MD, PhD, FAAD
+**Affiliation**: Stanford School of Medicine
+**Published**: 2025-01-15 | **Updated**: 2025-06-10
+```
+
+**Person Schema:**
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Dr. Sarah Johnson",
+  "jobTitle": "Chief Medical Officer",
+  "affiliation": {
+    "@type": "Organization",
+    "name": "Stanford School of Medicine"
+  },
+  "sameAs": [
+    "https://linkedin.com/in/sarahjohnsonmd",
+    "https://scholar.google.com/citations?user=xyz"
+  ]
+}
+```
 
 **Content Signals:**
 - Cite primary sources for claims
